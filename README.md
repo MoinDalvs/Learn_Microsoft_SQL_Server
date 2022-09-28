@@ -462,7 +462,7 @@ ___
           INNER JOIN Employee E1
           ON E.Employee_id = E1.Employee_id
           ORDER BY Employee_id;
-
+___
 ### Left Outer Join
 
 ![18 01 2022_19 09 47_REC](https://user-images.githubusercontent.com/99672298/192812427-526adc1c-cd70-4110-b529-a7da8a509f98.png)
@@ -478,7 +478,7 @@ ___
         LEFT JOIN Orders O
         ON E.Employee_ID = O.Employee_ID
         ORDER BY E.Employee_ID;
-
+___
 ### Right Outer Join
 
 ![19 01 2022_00 25 16_REC](https://user-images.githubusercontent.com/99672298/192812442-562d2b69-cdae-4852-8289-d6148f416f3c.png)
@@ -494,7 +494,7 @@ ___
         RIGHT JOIN Orders O
         ON E.Employee_ID = O.Employee_ID
         ORDER BY O.Order_ID;        
-
+___
 ### Full Join
 
 ![19 01 2022_16 22 31_REC](https://user-images.githubusercontent.com/99672298/192812617-70395d87-f4d0-452e-9ac5-2006091556f6.png)
@@ -525,393 +525,430 @@ ___
         FROM Employee E
         CROSS JOIN Orders O
         ORDER BY E.Employee_ID;
-
+___
 ### SQL Built in Functions
+
+![19 01 2022_18 42 22_REC](https://user-images.githubusercontent.com/99672298/192813101-05f08500-70b2-4bbb-8661-26d42e6308e0.png)
+![19 01 2022_18 44 13_REC](https://user-images.githubusercontent.com/99672298/192813119-349ad4a3-ad6d-486f-abd9-5cbec90e77a7.png)
+![19 01 2022_18 48 34_REC](https://user-images.githubusercontent.com/99672298/192813240-7ce638a1-a99f-430e-bf32-a68f0a06817e.png)
+![19 01 2022_18 59 27_REC - Copy](https://user-images.githubusercontent.com/99672298/192813312-d8076b5b-4710-40d2-bcf9-73c18c12c1af.png)
+![19 01 2022_19 09 02_REC](https://user-images.githubusercontent.com/99672298/192813332-65563dc2-780f-440c-af0b-b19a8c3cfa8d.png)
 
 ### Conversion Funciton
 
-SELECT CAST('10' AS INT) * 20 AS Cast_Ver,
-CONVERT(INT, '10') * 20 AS Convert_Ver;
+        SELECT CAST('10' AS INT) * 20 AS Cast_Ver,
+        CONVERT(INT, '10') * 20 AS Convert_Ver;
 
-SELECT TRY_CONVERT(INT, '100') * 20 AS 'Try Convert';
+        SELECT TRY_CONVERT(INT, '100') * 20 AS 'Try Convert';
 
-SELECT CAST('A' AS INT) * 20 AS Cast_Ver;
+        SELECT CAST('A' AS INT) * 20 AS Cast_Ver;
 
-SELECT TRY_CONVERT(INT, 'X100') * 20 AS 'Try Convert';
+        SELECT TRY_CONVERT(INT, 'X100') * 20 AS 'Try Convert';
 
-SELECT TRY_CONVERT(INT, 'A')*20 AS TryCastresult;
+        SELECT TRY_CONVERT(INT, 'A')*20 AS TryCastresult;
 
--- Logical Functions
+        -- Logical Functions
 
-SELECT CHOOSE (3,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (3,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE (4,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (4,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE (0,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (0,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE (6,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (6,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE (3.5,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (3.5,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE (3.4,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (3.4,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE (3.9,'Test','Rest','Zest','West','Nest');
+        SELECT CHOOSE (3.9,'Test','Rest','Zest','West','Nest');
 
-SELECT CHOOSE(1.4,'A','B','C','D');
+        SELECT CHOOSE(1.4,'A','B','C','D');
 
-SELECT IIF(1>2, 'TRUE', 'FALSE') AS Result;
+        SELECT IIF(1>2, 'TRUE', 'FALSE') AS Result;
 
-SELECT IIF(1.46>1.45, 'TRUE', 'FALSE') AS Result;
+        SELECT IIF(1.46>1.45, 'TRUE', 'FALSE') AS Result;
+___
+### Math Functions
 
--- Math Functions
+![19 01 2022_22 27 07_REC](https://user-images.githubusercontent.com/99672298/192813390-00b58d70-5edb-4810-9581-6e08d3bc0a98.png)
+![19 01 2022_22 29 40_REC](https://user-images.githubusercontent.com/99672298/192813478-c781111d-f8b0-4bff-a391-6c1fc5a0bc52.png)
 
-SELECT SQRT(16)
+        SELECT SQRT(16)
 
-SELECT SQRT(16) * SQUARE(4) AS RESULT;
+        SELECT SQRT(16) * SQUARE(4) AS RESULT;
 
-select sqrt(16) + square(2) as Result;
+        select sqrt(16) + square(2) as Result;
 
-select sqrt(16) - square(4) as Result;
+        select sqrt(16) - square(4) as Result;
 
-select abs(sqrt(16) - square(4)) as Result;
+        select abs(sqrt(16) - square(4)) as Result;
 
-SELECT ABS(SQUARE(2) - SQRT(1225));
+        SELECT ABS(SQUARE(2) - SQRT(1225));
 
-SELECT ABS(-15);
+        SELECT ABS(-15);
 
-Select 2*2*2*2;
+        Select 2*2*2*2;
 
-SELECT POWER(2,4);
+        SELECT POWER(2,4);
+___
+### Aggregate Functions
 
--- Aggregate Functions
+![19 01 2022_22 53 28_REC](https://user-images.githubusercontent.com/99672298/192813519-7b54cf13-9f67-4705-84dc-99f6ee34948a.png)
+![20 01 2022_19 40 18_REC](https://user-images.githubusercontent.com/99672298/192813568-87b83af7-4e09-4fd7-9b93-9411dac480bd.png)
 
-USE Emp_Dept
-SELECT AVG(dept_no) FROM Department;
-SELECT * FROM Department;
+        USE Emp_Dept
+        SELECT AVG(dept_no) FROM Department;
+        SELECT * FROM Department;
 
-Select AVG(Salary) from Empl_details;
+        Select AVG(Salary) from Empl_details;
 
-select * from Empl_details;
+        select * from Empl_details;
 
-select avg(dept_no) from Empl_details;
+        select avg(dept_no) from Empl_details;
 
-SELECT AVG(DISTINCT dept_no) FROM Empl_details;
+        SELECT AVG(DISTINCT dept_no) FROM Empl_details;
 
-SELECT COUNT(DISTINCT Salary) FROM Empl_details;
+        SELECT COUNT(DISTINCT Salary) FROM Empl_details;
 
-SELECT COUNT(Salary) FROM Empl_details;
+        SELECT COUNT(Salary) FROM Empl_details;
 
-SELECT COUNT(*) FROM Empl_details;
+        SELECT COUNT(*) FROM Empl_details;
 
-select min(distinct salary) from Empl_details;
+        select min(distinct salary) from Empl_details;
 
-SELECT MIN(dept_no) FROM Department;
+        SELECT MIN(dept_no) FROM Department;
 
-SELECT MAX(Salary) FROM Empl_details;
+        SELECT MAX(Salary) FROM Empl_details;
 
-Select sum(salary) as 'Sum of Salary' from Empl_details;
+        Select sum(salary) as 'Sum of Salary' from Empl_details;
 
-SELECT MAX(location) AS Location FROM Department;
+        SELECT MAX(location) AS Location FROM Department;
 
-select avg(salary) As 'Average Salary', Min(salary) as 'Minimum Salary', max(salary) as 'Maximum Salary',
-Sum(salary) as 'Sum of Salary' from Empl_details;
+        select avg(salary) As 'Average Salary', Min(salary) as 'Minimum Salary', max(salary) as 'Maximum Salary',
+        Sum(salary) as 'Sum of Salary' from Empl_details;
 
-select * from Empl_details;
+        select * from Empl_details;
+___
+### String Functions
 
--- String Functions
+![20 01 2022_19 41 35_REC](https://user-images.githubusercontent.com/99672298/192813668-466b8e40-0553-4182-aa89-337046f0f95c.png)
+![20 01 2022_19 43 24_REC](https://user-images.githubusercontent.com/99672298/192813690-8cae2f74-fe84-4ab2-9554-79d2610c96b8.png)
+![20 01 2022_19 45 01_REC](https://user-images.githubusercontent.com/99672298/192813707-1e04f1d4-8fb2-49c9-ad35-d37c5c8bba48.png)
 
-SELECT REVERSE('WASITACARORACATISAW');
+        SELECT REVERSE('WASITACARORACATISAW');
 
-SELECT REVERSE('STRESSED') AS 'Reserse String';
+        SELECT REVERSE('STRESSED') AS 'Reserse String';
 
-SELECT REVERSE('EVIL') AS 'Reserse String';
+        SELECT REVERSE('EVIL') AS 'Reserse String';
 
-SELECT REVERSE('LIVED') AS 'Reserse String';
+        SELECT REVERSE('LIVED') AS 'Reserse String';
 
-SELECT REVERSE('RACECAR') AS 'Reserse String';
+        SELECT REVERSE('RACECAR') AS 'Reserse String';
 
-SELECT REVERSE('?GNIKROW YLLAER SIHT SI') AS 'Reserse String';
+        SELECT REVERSE('?GNIKROW YLLAER SIHT SI') AS 'Reserse String';
 
-SELECT REVERSE('KNITS') AS 'Reserse String';
+        SELECT REVERSE('KNITS') AS 'Reserse String';
 
-SELECT REVERSE('DOG') AS 'Reserse String';
+        SELECT REVERSE('DOG') AS 'Reserse String';
 
-SELECT REVERSE('WAR') AS 'Reserse String';
+        SELECT REVERSE('WAR') AS 'Reserse String';
 
-SELECT REVERSE('TRAMS') AS 'Reserse String';
+        SELECT REVERSE('TRAMS') AS 'Reserse String';
 
-SELECT REVERSE('SNUG') AS 'Reserse String';
+        SELECT REVERSE('SNUG') AS 'Reserse String';
 
-SELECT REVERSE('!OS KNIHT TNOD I') AS 'Reserse String';
+        SELECT REVERSE('!OS KNIHT TNOD I') AS 'Reserse String';
 
-SELECT LTRIM('       On your left said Captain America    ');
+        SELECT LTRIM('       On your left said Captain America    ');
 
-SELECT RTRIM('Right     ');
+        SELECT RTRIM('Right     ');
 
-SELECT TRIM('       Centre    ');
+        SELECT TRIM('       Centre    ');
 
-SELECT LOWER('JOBU');
+        SELECT LOWER('JOBU');
 
-SELECT UPPER('jobu');
+        SELECT UPPER('jobu');
 
-select replace('Dalvi Sana Saleem','Sana','Moin') as 'Replace',
-substring('Dalvi Moin Saleem', 7,4) as 'Substring', 
-Left('Dalvi Moin Saleem', 5) as 'Left',
-right('Dalvi Moin Saleem',6) as 'Right';\
+        select replace('Dalvi Sana Saleem','Sana','Moin') as 'Replace',
+        substring('Dalvi Moin Saleem', 7,4) as 'Substring', 
+        Left('Dalvi Moin Saleem', 5) as 'Left',
+        right('Dalvi Moin Saleem',6) as 'Right';
+___
+### Date and Time functions
 
--- Date and Time functions
+![20 01 2022_20 02 44_REC](https://user-images.githubusercontent.com/99672298/192813807-76e31c74-72e7-4ce5-bccf-8247cb9b23c1.png)
+![20 01 2022_20 03 37_REC](https://user-images.githubusercontent.com/99672298/192813843-b0482bad-49f8-4b9b-8182-0362d1e77478.png)
 
-SELECT DATEPART(mm,'15-DEC-1996') AS 'MONTH';
+        SELECT DATEPART(mm,'15-DEC-1996') AS 'MONTH';
 
-SELECT DATEIFF();
+        SELECT DATEIFF();
 
-SELECT DATEADD(mm,2,'12/31/2015');
+        SELECT DATEADD(mm,2,'12/31/2015');
 
-SELECT DATEADD(dd,31,'12/31/2015');
+        SELECT DATEADD(dd,31,'12/31/2015');
 
-select
-sysdatetime() as 'SYSDATETIME', Current_Timestamp as 'TimeStamp',
-datepart(year, '12-DEC-2017') as 'Datepart',
-Datediff (mm, '12/31/2015', '10/23/2016') as 'Datediff' ,
-Dateadd(mm, 2, '12/31/2015') as 'Dateadd';
+        select
+        sysdatetime() as 'SYSDATETIME', Current_Timestamp as 'TimeStamp',
+        datepart(year, '12-DEC-2017') as 'Datepart',
+        Datediff (mm, '12/31/2015', '10/23/2016') as 'Datediff' ,
+        Dateadd(mm, 2, '12/31/2015') as 'Dateadd';
+___
+### Group By Function
 
--- Group By Function
+        USE Emp_Dept
 
-USE Emp_Dept
+        select dept_no, count(*) from Empl_details group by Dept_No;
 
-select dept_no, count(*) from Empl_details group by Dept_No;
+        SELECT dept_no AS 'Department Number',COUNT(*) AS 'Count' FROM Department
+        GROUP BY dept_no;
 
-SELECT dept_no AS 'Department Number',COUNT(*) AS 'Count' FROM Department
-GROUP BY dept_no;
+        SELECT dept_no AS 'Department Number', location ,
+        COUNT(*) AS 'Count' FROM Department
+        GROUP BY dept_no, location;
 
-SELECT dept_no AS 'Department Number', location ,
-COUNT(*) AS 'Count' FROM Department
-GROUP BY dept_no, location;
+        select dept_no, avg(salary) as AVGSal, min(salary) as MinSal, Max(Salary) as MaxSal, sum(salary) as SumSal 
+        from Empl_details group by Dept_No;
 
-select dept_no, avg(salary) as AVGSal, min(salary) as MinSal, Max(Salary) as MaxSal, sum(salary) as SumSal 
-from Empl_details group by Dept_No;
+        select job_id, Count(*) from Empl_details
+        group by job_id;
 
-select job_id, Count(*) from Empl_details
-group by job_id;
+### Having Clause
 
--- Having Clause
+        SELECT Job_ID, COUNT(*) FROM Empl_details
+        GROUP BY Job_ID
+        HAVING MIN(Salary) > 30000;
 
-SELECT Job_ID, COUNT(*) FROM Empl_details
-GROUP BY Job_ID
-HAVING MIN(Salary) > 30000;
+#### deptno wise avg, min, max, sum salary, with sum of salary > 30000
 
--- deptno wise avg, min, max, sum salary, with sum of salary > 30000
+        select dept_no, avg(salary) as AVGSal, min(salary) as MinSal, Max(Salary) as MaxSal, sum(salary) as SumSal 
+        from Empl_details group by Dept_No having sum(salary) > 30000;
+___
+### Stored Procedure
 
-select dept_no, avg(salary) as AVGSal, min(salary) as MinSal, Max(Salary) as MaxSal, sum(salary) as SumSal 
-from Empl_details group by Dept_No having sum(salary) > 30000;
+![21 01 2022_20 06 36_REC](https://user-images.githubusercontent.com/99672298/192814114-23527165-3ac5-4c53-8cd3-9dc54a4b81c1.png)
+![21 01 2022_20 09 37_REC](https://user-images.githubusercontent.com/99672298/192814191-ab06a430-b2de-4662-a283-0da0bfd56a7e.png)
+![21 01 2022_20 12 44_REC](https://user-images.githubusercontent.com/99672298/192814203-d673df1b-267c-4f50-8d32-5ecf176734dc.png)
+![21 01 2022_20 24 18_REC](https://user-images.githubusercontent.com/99672298/192814211-9948bede-f362-4e69-b23c-8041e8a07d65.png)
 
--- Stored Procedure
+        select * from Empl_details;
 
-select * from Empl_details;
+        create procedure sp_GetEmployeeInfo(@empid INT)
+        as begin 
+        select emp_id, first_name, last_name, manager_id, phone_number, hire_date, Job_id, Dept_no, salary
+        from Emp_Dept.dbo.Empl_details
+        where emp_id = @empid
+        end;
 
-create procedure sp_GetEmployeeInfo(@empid INT)
-as begin 
-select emp_id, first_name, last_name, manager_id, phone_number, hire_date, Job_id, Dept_no, salary
-from Emp_Dept.dbo.Empl_details
-where emp_id = @empid
-end;
+        exec dbo.sp_GetEmployeeInfo
+        @empid = 1004
 
-exec dbo.sp_GetEmployeeInfo
-@empid = 1004
+        GO
+        CREATE PROCEDURE dbo.uspGETDeptDetails
+        AS
+        SELECT * FROM Department
+        GO;
 
-GO
-CREATE PROCEDURE dbo.uspGETDeptDetails
-AS
-SELECT * FROM Department
-GO;
+        EXEC dbo.uspGETDeptDetails;
 
-EXEC dbo.uspGETDeptDetails;
+        dbo.uspGETDeptDetails;
 
-dbo.uspGETDeptDetails;
+        USE Emp_Dept
+        GO
+        CREATE PROC dbo.uspGetDetails
+        @Dept_No NVARCHAR(2)
+        AS
+        SELECT * FROM Department
+        WHERE dept_no = @Dept_No;
 
-USE Emp_Dept
-GO
-CREATE PROC dbo.uspGetDetails
-@Dept_No NVARCHAR(2)
-AS
-SELECT * FROM Department
-WHERE dept_no = @Dept_No;
+        EXEC dbo.uspGetDetails @Dept_No = 30;
 
-EXEC dbo.uspGetDetails @Dept_No = 30;
+        dbo.uspGetDetails @Dept_No = 30;
 
-dbo.uspGetDetails @Dept_No = 30;
+        USE Emp_Dept
+        GO
+        Create PROCEDURE dbo.uspGetFull_name
+        @emp_id INT
+        AS
+        SELECT first_name + SPACE(1) + last_name AS 'Full Name' FROM Empl_details
+        WHERE @emp_id = emp_id;
 
-USE Emp_Dept
-GO
-Create PROCEDURE dbo.uspGetFull_name
-@emp_id INT
-AS
-SELECT first_name + SPACE(1) + last_name AS 'Full Name' FROM Empl_details
-WHERE @emp_id = emp_id;
+        dbo.uspGetFull_name @emp_id = 1002;
 
-dbo.uspGetFull_name @emp_id = 1002;
+        SELECT * FROM Empl_details;
 
-SELECT * FROM Empl_details;
+        CREATE PROCEDURE dbo.uspNULLexample
+        @Dept_No NVARCHAR(2) = NULL
+        AS
+        SELECT * FROM Department
+        WHERE dept_no = @Dept_No
+        GO;
 
-CREATE PROCEDURE dbo.uspNULLexample
-@Dept_No NVARCHAR(2) = NULL
-AS
-SELECT * FROM Department
-WHERE dept_no = @Dept_No
-GO;
+        CREATE PROCEDURE dbo.GetDetailsFrom
+        @DeptNo NVARCHAR(2) = NULL,
+        @DeptName NVARCHAR(10) = NULL
+        AS
+        SELECT * FROM Department
+        WHERE dept_no = @DeptNo
+        AND dept_name = @DeptName
+        GO
 
-CREATE PROCEDURE dbo.GetDetailsFrom
-@DeptNo NVARCHAR(2) = NULL,
-@DeptName NVARCHAR(10) = NULL
-AS
-SELECT * FROM Department
-WHERE dept_no = @DeptNo
-AND dept_name = @DeptName
-GO
+        Getdetailsfrom @DeptNo = 50, @DeptName = 'Sales';
 
-Getdetailsfrom @DeptNo = 50, @DeptName = 'Sales';
+        CREATE PROCEDURE dbo.uspGetCOUNT
+        --Define Parameters
+        /* This is multiparameter Stored procedure
+        Having output parameter*/
+        @Deptno NVARCHAR(10), 
+        @COUNT int OUTPUT
+        AS
+        SELECT @COUNT = COUNT(*)
+        FROM Department
+        WHERE dept_no = @Deptno;
 
-CREATE PROCEDURE dbo.uspGetCOUNT
---Define Parameters
-/* This is multiparameter Stored procedure
-Having output parameter*/
-@Deptno NVARCHAR(10), 
-@COUNT int OUTPUT
-AS
-SELECT @COUNT = COUNT(*)
-FROM Department
-WHERE dept_no = @Deptno;
+        DECLARE @COUNT INT
+        EXEC dbo.uspGetCOUNT @Deptno = 10, @COUNT = @COUNT OUTPUT
+        SELECT @COUNT;
 
-DECLARE @COUNT INT
-EXEC dbo.uspGetCOUNT @Deptno = 10, @COUNT = @COUNT OUTPUT
-SELECT @COUNT;
+        CREATE PROCEDURE dbo.uspTryCatchTest
+        AS 
+        BEGIN TRY
+        SELECT 1/0
+        END TRY
+        BEGIN CATCH 
+        SELECT ERROR_NUMBER() AS 'ErrorNumber',
+        ERROR_SEVERITY() AS 'ErrorSeverity',
+        ERROR_PROCEDURE() AS 'ErrorProcedure',
+        ERROR_LINE() AS 'ErrorLine',
+        ERROR_MESSAGE() AS 'ErrorMessage',
+        ERROR_STATE() AS 'ErrorState';
+        END CATCH;
 
-CREATE PROCEDURE dbo.uspTryCatchTest
-AS 
-BEGIN TRY
-SELECT 1/0
-END TRY
-BEGIN CATCH 
-SELECT ERROR_NUMBER() AS 'ErrorNumber',
-ERROR_SEVERITY() AS 'ErrorSeverity',
-ERROR_PROCEDURE() AS 'ErrorProcedure',
-ERROR_LINE() AS 'ErrorLine',
-ERROR_MESSAGE() AS 'ErrorMessage',
-ERROR_STATE() AS 'ErrorState';
-END CATCH;
+        EXEC dbo.uspTryCatchTest;
+___
+### User Defined Functon 
+#### Scalar Function is sub category of the above 
 
-EXEC dbo.uspTryCatchTest;
+![22 01 2022_22 58 58_REC](https://user-images.githubusercontent.com/99672298/192814511-7ec77b6b-15b6-429c-9b2b-c7d688554ec2.png)
+![22 01 2022_23 02 16_REC](https://user-images.githubusercontent.com/99672298/192814534-5e9cf999-d70b-426f-ac2f-70683339b831.png)
 
--- User Defined Functon 
--- Scalar Function is sub category of the above 
+        USE Emp_Dept
+        CREATE FUNCTION No_Parameter()
+        RETURNS INT
+        AS BEGIN
+        RETURN (SELECT SUM(Salary) FROM Empl_details)
+        END;
 
-USE Emp_Dept
-CREATE FUNCTION No_Parameter()
-RETURNS INT
-AS BEGIN
-RETURN (SELECT SUM(Salary) FROM Empl_details)
-END;
+        ALTER FUNCTION No_Parameter()
+        RETURNS INT
+        AS BEGIN
+        RETURN (SELECT SUM(Salary) FROM Empl_details)
+        END;
 
-ALTER FUNCTION No_Parameter()
-RETURNS INT
-AS BEGIN
-RETURN (SELECT SUM(Salary) FROM Empl_details)
-END;
+        SELECT dbo.No_Parameter() AS Total_Salary;
 
-SELECT dbo.No_Parameter() AS Total_Salary;
+        ALTER FUNCTION No_Parameter()
+        RETURNS INT
+        AS BEGIN
+        RETURN(SELECT AVG(Salary) FROM Empl_details)
+        END;
 
-ALTER FUNCTION No_Parameter()
-RETURNS INT
-AS BEGIN
-RETURN(SELECT AVG(Salary) FROM Empl_details)
-END;
+        SELECT dbo.No_Parameter() AS AVG_Salary;
 
-SELECT dbo.No_Parameter() AS AVG_Salary;
+        USE Emp_Dept
+        SELECT dbo.No_parameter()
 
-USE Emp_Dept
-SELECT dbo.No_parameter()
+        SELECT * FROM Empl_details
+        WHERE salary > dbo.No_parameter();
 
-SELECT * FROM Empl_details
-WHERE salary > dbo.No_parameter();
+        CREATE FUNCTION Full_Name(@first_name VARCHAR(10), @last_name VARCHAR(10))
+        RETURNS VARCHAR(20)
+        AS BEGIN
+        RETURN (SELECT @first_name + SPACE(1) + @last_name)
+        END;
 
-CREATE FUNCTION Full_Name(@first_name VARCHAR(10), @last_name VARCHAR(10))
-RETURNS VARCHAR(20)
-AS BEGIN
-RETURN (SELECT @first_name + SPACE(1) + @last_name)
-END;
+        SELECT dbo.Full_Name('Moin','Dalvi') AS 'Full Name';
 
-SELECT dbo.Full_Name('Moin','Dalvi') AS 'Full Name';
+        CREATE FUNCTION Empl_fullname(@emp_id INT)
+        RETURNS VARCHAR(20)
+        AS BEGIN
+        Return (SELECT first_name + SPACE(1) + last_name AS 'Full Name' FROM Empl_details
+        WHERE @emp_id = emp_id)
+        END;
 
-CREATE FUNCTION Empl_fullname(@emp_id INT)
-RETURNS VARCHAR(20)
-AS BEGIN
-Return (SELECT first_name + SPACE(1) + last_name AS 'Full Name' FROM Empl_details
-WHERE @emp_id = emp_id)
-END;
+        select * from Empl_details;
+        select dbo.Empl_fullname(1004);
+___
+### User defined Function: Inline table-Valued Function
 
-select * from Empl_details;
-select dbo.Empl_fullname(1004);
+![23 01 2022_23 26 37_REC](https://user-images.githubusercontent.com/99672298/192814600-ae677a25-4c59-42b0-a920-e2ae73d91bad.png)
+![23 01 2022_23 28 10_REC](https://user-images.githubusercontent.com/99672298/192814620-ed7401da-215d-4a3a-8ec7-5b6f875e8a89.png)
 
--- User defined Function: Inline table-Valued Function
+        Create function Empl_FullNames(@emp_id INT)
+        RETURNS Table
+        AS
+        Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
+        Job_id, Dept_no, Salary FROM Empl_details WHERE @emp_id = emp_id);
 
-Create function Empl_FullNames(@emp_id INT)
-RETURNS Table
-AS
-Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
-Job_id, Dept_no, Salary FROM Empl_details WHERE @emp_id = emp_id);
+        select * from Empl_FullNames(1001);
 
-select * from Empl_FullNames(1001);
+        Alter function Empl_FullNames(@emp_id INT)
+        RETURNS Table
+        AS
+        Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
+        Job_id, Dept_no, Salary FROM Empl_details WHERE @emp_id > emp_id);
 
-Alter function Empl_FullNames(@emp_id INT)
-RETURNS Table
-AS
-Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
-Job_id, Dept_no, Salary FROM Empl_details WHERE @emp_id > emp_id);
+        select * from Empl_FullNames(1004);
 
-select * from Empl_FullNames(1004);
+        Alter function Empl_FullNames(@emp_id INT)
+        RETURNS Table
+        AS
+        Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
+        Job_id, Dept_no, Salary FROM Empl_details WHERE @emp_id <= emp_id);
 
-Alter function Empl_FullNames(@emp_id INT)
-RETURNS Table
-AS
-Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
-Job_id, Dept_no, Salary FROM Empl_details WHERE @emp_id <= emp_id);
+        select * from Empl_FullNames(1001);
 
-select * from Empl_FullNames(1001);
+        Alter function Empl_FullNames()
+        RETURNS Table
+        AS
+        Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
+        Job_id, Dept_no, Salary FROM Empl_details);
 
-Alter function Empl_FullNames()
-RETURNS Table
-AS
-Return (SELECT emp_id, first_name + SPACE(1) + last_name AS 'Full Name', manager_id, hire_date,
-Job_id, Dept_no, Salary FROM Empl_details);
+        select * from Empl_FullNames() 
+___
+### Multi-Statement Table-Valued Function
 
-select * from Empl_FullNames() 
+![28 09 2022_19 37 28_REC](https://user-images.githubusercontent.com/99672298/192814805-06c39fc2-f04a-4d9b-b0ec-239aeee5d3a8.png)
+![28 09 2022_19 38 35_REC](https://user-images.githubusercontent.com/99672298/192814833-87ef83b7-91e6-4a36-90a5-00d575792529.png)
 
--- Multi-Statement Table-Valued Function
+        Alter function GetEmployeeInfo(@Dept_id INTEGER)
+        Returns @retGetEmployeeInfo Table
+        (
+        EmpID Int primary Key Not null,
+        FullName nvarchar(20) NOt null,
+        DeptNo INT not null
+        )
+        AS
+        BEGIN
+        Insert @retGetEmployeeInfo
+        Select emp_id as 'Employee Id', first_name + space(1) + last_name as 'Full Name', dept_no as 'Department No'
+        From Empl_details
+        where Dept_No = @Dept_id
+        Return
+        END;
 
-Alter function GetEmployeeInfo(@Dept_id INTEGER)
-Returns @retGetEmployeeInfo Table
-(
-EmpID Int primary Key Not null,
-FullName nvarchar(20) NOt null,
-DeptNo INT not null
-)
-AS
-BEGIN
-Insert @retGetEmployeeInfo
-Select emp_id as 'Employee Id', first_name + space(1) + last_name as 'Full Name', dept_no as 'Department No'
-From Empl_details
-where Dept_No = @Dept_id
-Return
-END;
+        select * from GetEmployeeInfo(10);
 
-select * from GetEmployeeInfo(10);
+        select * from GetEmployeeInfo(20);
+___
+### Trigger
 
-select * from GetEmployeeInfo(20);
+![28 09 2022_19 53 36_REC](https://user-images.githubusercontent.com/99672298/192814925-2dbcfb0b-93be-4fb5-9366-8064f4535351.png)
+![28 09 2022_19 58 12_REC](https://user-images.githubusercontent.com/99672298/192814947-0aa19291-31e8-4759-b7f4-4e6fa16dd19f.png)
+![28 09 2022_19 59 27_REC](https://user-images.githubusercontent.com/99672298/192814962-66d4bb52-63c7-43ca-a055-76a4b2b23347.png)
 
--- Trigger
-
-Create trigger safety_patch on database for
-create_table, alter_table, drop_table
-as 
-print'you can not create, drop and alter table in  this database'
-rollback;
+        Create trigger safety_patch on database for
+        create_table, alter_table, drop_table
+        as 
+        print'you can not create, drop and alter table in  this database'
+        rollback;
