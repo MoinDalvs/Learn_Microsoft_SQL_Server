@@ -15,6 +15,34 @@
 ![18 09 2022_14 41 15_REC](https://user-images.githubusercontent.com/99672298/192807810-45a20ce5-9974-41dd-8364-c8a7a206ebf2.png)
 ![18 09 2022_15 43 53_REC](https://user-images.githubusercontent.com/99672298/192807836-f9e18c8f-1c18-4a71-ace1-9479e427c1cf.png)
 ___
+
+### Keys
++ Keys play an important role in the relational database.
++ It is used to uniquely identify any record or row of data from the table. It is also used to establish and identify relationships between tables.
+
+![image](https://user-images.githubusercontent.com/99672298/197166403-bec73e52-d4b9-451e-b981-3e6a694e0b91.png)
+![image](https://user-images.githubusercontent.com/99672298/197166451-6e9c924c-1230-46f4-a508-44d4e1e5174a.png)
+![image](https://user-images.githubusercontent.com/99672298/197165571-99e9cbd9-d9c4-4b14-8aad-822e82947359.png)
+![image](https://user-images.githubusercontent.com/99672298/197165620-18460ea9-aeda-4a1f-8af8-a267e09b6dcc.png)
+![image](https://user-images.githubusercontent.com/99672298/197165723-b6e15d0b-70d7-4c49-8656-738b5a16737c.png)
+![image](https://user-images.githubusercontent.com/99672298/197165763-2bb4e2b7-2490-4bae-9b44-a667106b0a63.png)
+
+#### Unique Key
+![image](https://user-images.githubusercontent.com/99672298/197165841-6101d3c9-e112-49fd-b66d-f95ba0121bbb.png)
+![image](https://user-images.githubusercontent.com/99672298/197165943-4968c3ba-f0ee-40a7-8278-c9117f560143.png)
+![image](https://user-images.githubusercontent.com/99672298/197166043-8f064190-58f4-4e1a-9e55-eabe77d28161.png)
+![image](https://user-images.githubusercontent.com/99672298/197166085-1f46bbcc-4117-4d14-adec-c561123799dc.png)
+![image](https://user-images.githubusercontent.com/99672298/197166179-9855410d-04c0-4c9c-b558-6f1ea740832c.png)
+![image](https://user-images.githubusercontent.com/99672298/197166208-22a8289d-8f85-46d5-877a-d06a2ae8dd26.png)
+![image](https://user-images.githubusercontent.com/99672298/197166343-ab1a13d1-5695-49cb-a539-d357374a0988.png)
+![image](https://user-images.githubusercontent.com/99672298/197166508-44579c4b-cb66-4ccf-8b41-b528833b9c6a.png)
+![image](https://user-images.githubusercontent.com/99672298/197166576-e1553046-5295-4cf0-9bfa-73beb443282e.png)
+![image](https://user-images.githubusercontent.com/99672298/197166612-12de2ea3-9917-4e06-8671-ab45ca8d7ba5.png)
+![image](https://user-images.githubusercontent.com/99672298/197166720-db8b46ae-9725-4617-9fdb-76d9904b6aaf.png)
+![image](https://user-images.githubusercontent.com/99672298/197166794-82263313-4202-4530-bba5-72ea7326867e.png)
+![image](https://user-images.githubusercontent.com/99672298/197166812-601c6fe0-7adb-41b8-bc04-67ca91b72368.png)
+
+___
 ### How to create database
 
     create database Test;
