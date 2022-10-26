@@ -197,7 +197,7 @@ ___
 
     drop table product1;-- You will get an error "Could not drop object 'product1' because it is referenced by a FOREIGN KEY constraint."
 
-    ### How to delete parent table and child table
+### How to delete parent table and child table
 
     drop table orders1;
     drop table product1;
